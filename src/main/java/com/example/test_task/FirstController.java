@@ -1,5 +1,8 @@
 package com.example.test_task;
 
+import com.example.test_task.data.KpacEntityDaoImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
@@ -11,8 +14,19 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("/hello")
 public class FirstController {
+
+    KpacEntityDaoImpl dao;
+
+    @Autowired
+    public FirstController(KpacEntityDaoImpl dao){
+        this.dao=dao;
+    }
+
     @RequestMapping("/showForm")
     public String showForm(){
+
+
+        System.out.println(dao.getAllKpacEntities());
         return "helloworld-form";
     }
 

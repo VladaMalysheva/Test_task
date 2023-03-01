@@ -1,0 +1,15 @@
+package com.example.test_task.data;
+
+import com.example.test_task.data.entities.KpacEntity;
+
+import java.util.List;
+
+public interface KpacEntityDAO {
+    KpacEntity getKpacEntityById(Long id);
+
+    List<KpacEntity> getAllKpacEntities();
+
+    boolean deleteKpacEntity(KpacEntity entity);
+
+    boolean createKpacEntity(KpacEntity entity);
+}

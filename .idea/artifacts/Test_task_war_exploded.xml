@@ -22,8 +22,12 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.24" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.24" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.24" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.3.24" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.24" />
           <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.4" />
           <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.15" />
+          <element id="library" level="project" name="Maven: com.mysql:mysql-connector-j:8.0.32" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.21.9" />
         </element>
       </element>
       <element id="directory" name="META-INF">

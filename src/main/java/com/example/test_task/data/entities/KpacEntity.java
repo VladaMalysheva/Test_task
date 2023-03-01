@@ -1,4 +1,4 @@
-package com.example.test_task;
+package com.example.test_task.data.entities;
 
 
 import java.sql.Date;
@@ -55,5 +55,15 @@ public class KpacEntity {
 
     public void setCreationDate(Date creationDate) {
         CreationDate = creationDate;
+    }
+
+    @Override
+    public String toString() {
+        return "KpacEntity{" +
+                "ID=" + ID +
+                ", Title='" + Title + '\'' +
+                ", Description='" + Description + '\'' +
+                ", CreationDate=" + CreationDate +
+                '}';
     }
 }
