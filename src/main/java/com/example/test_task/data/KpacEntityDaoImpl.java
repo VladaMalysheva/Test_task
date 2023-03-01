@@ -14,6 +14,9 @@ public class KpacEntityDaoImpl implements KpacEntityDAO{
     JdbcTemplate jdbcTemplate;
 
     private final String SQL_GET_ALL = "select * from k_pac";
+    private final String SQL_FIND_ENTITY = "select * from k_pac where ID = ?";
+    private final String SQL_DELETE_ENTITY = "delete from k_pac where ID = ?";
+    private final String SQL_INSERT_ENTITY = "insert into k_pac(ID, Title, Description, CreationDate) values(?,?,?,?)";
 
     @Autowired
     public KpacEntityDaoImpl(DataSource dataSource) {
@@ -21,8 +24,8 @@ public class KpacEntityDaoImpl implements KpacEntityDAO{
     }
 
     @Override
-    public KpacEntity getKpacEntityById(Long id) {
-        return null;
+    public KpacEntity getKpacEntityById(int id) {
+        return jdbcTemplate.queryForObject(SQL_FIND_ENTITY, new KpacEntityMapper(), id);
     }
 
     @Override
@@ -32,11 +35,12 @@ public class KpacEntityDaoImpl implements KpacEntityDAO{
 
     @Override
     public boolean deleteKpacEntity(KpacEntity entity) {
-        return false;
+        return jdbcTemplate.update(SQL_DELETE_ENTITY, entity.getID()) > 0;
     }
 
     @Override
     public boolean createKpacEntity(KpacEntity entity) {
-        return false;
+        return jdbcTemplate.update(SQL_INSERT_ENTITY, entity.getID(), entity.getTitle(), entity.getDescription(),
+                entity.getCreationDate()) > 0;
     }
 }

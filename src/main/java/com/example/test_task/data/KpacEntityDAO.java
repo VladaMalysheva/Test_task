@@ -5,7 +5,7 @@ import com.example.test_task.data.entities.KpacEntity;
 import java.util.List;
 
 public interface KpacEntityDAO {
-    KpacEntity getKpacEntityById(Long id);
+    KpacEntity getKpacEntityById(int id);
 
     List<KpacEntity> getAllKpacEntities();
 

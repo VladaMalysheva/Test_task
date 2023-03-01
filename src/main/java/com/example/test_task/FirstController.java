@@ -26,7 +26,7 @@ public class FirstController {
     public String showForm(){
 
 
-        System.out.println(dao.getAllKpacEntities());
+        System.out.println(dao.getKpacEntityById(1));
         return "helloworld-form";
     }
 
