@@ -1,6 +1,8 @@
 package com.example.test_task;
 
 import com.example.test_task.data.KpacEntityDaoImpl;
+import com.example.test_task.data.KpacRelationDaoImpl;
+import com.example.test_task.data.KpacSetDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
@@ -16,17 +18,24 @@ import javax.servlet.http.HttpServletRequest;
 public class FirstController {
 
     KpacEntityDaoImpl dao;
+    KpacSetDaoImpl setDao;
+
+    KpacRelationDaoImpl relationDao;
 
     @Autowired
-    public FirstController(KpacEntityDaoImpl dao){
+    public FirstController(KpacEntityDaoImpl dao, KpacSetDaoImpl setDao, KpacRelationDaoImpl relationDao){
         this.dao=dao;
+        this.setDao=setDao;
+        this.relationDao=relationDao;
     }
 
     @RequestMapping("/showForm")
     public String showForm(){
 
 
-        System.out.println(dao.getKpacEntityById(1));
+//        System.out.println(dao.getKpacEntityById(1));
+//        System.out.println(setDao.getKpacSetById(1));
+        System.out.println(relationDao.getKpacRelationById(1));
         return "helloworld-form";
     }
 

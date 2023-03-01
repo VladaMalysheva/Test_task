@@ -1,4 +1,4 @@
-package com.example.test_task.data;
+package com.example.test_task.data.daoInterfaces;
 
 import com.example.test_task.data.entities.KpacEntity;
 

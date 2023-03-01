@@ -1,6 +1,8 @@
 package com.example.test_task.data;
 
+import com.example.test_task.data.daoInterfaces.KpacEntityDAO;
 import com.example.test_task.data.entities.KpacEntity;
+import com.example.test_task.data.mappers.KpacEntityMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -9,7 +11,7 @@ import javax.sql.DataSource;
 import java.util.List;
 
 @Component
-public class KpacEntityDaoImpl implements KpacEntityDAO{
+public class KpacEntityDaoImpl implements KpacEntityDAO {
 
     JdbcTemplate jdbcTemplate;
 

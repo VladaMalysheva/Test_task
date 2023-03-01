@@ -9,11 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7e8636-e880-4431-a238-a782b173568d" name="Changes" comment="Created first dao and mapper, tested them">
+    <list default="true" id="3e7e8636-e880-4431-a238-a782b173568d" name="Changes" comment="Completed kpac entity dao">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/KpacRelationDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/KpacSetDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/daoInterfaces/KpacRelationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/daoInterfaces/KpacSetDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/entities/KpacRelation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/entities/KpacSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/mappers/KpacRelationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/mappers/KpacSetMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_task/FirstController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/FirstController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/KpacEntityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/KpacEntityDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_task/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/KpacEntityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/daoInterfaces/KpacEntityDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/KpacEntityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/KpacEntityDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/KpacEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/test_task/data/mappers/KpacEntityMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -171,7 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677588836238</updated>
       <workItem from="1677588837581" duration="6502000" />
-      <workItem from="1677661729313" duration="3216000" />
+      <workItem from="1677661729313" duration="5779000" />
     </task>
     <task id="LOCAL-00001" summary="Configured spring mvc and made basic controller">
       <created>1677615673156</created>
@@ -201,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677663888622</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Completed kpac entity dao">
+      <created>1677665008646</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677665008646</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +241,7 @@
     <MESSAGE value="Reconfigured app using annotations" />
     <MESSAGE value="Connected database" />
     <MESSAGE value="Created first dao and mapper, tested them" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created first dao and mapper, tested them" />
+    <MESSAGE value="Completed kpac entity dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed kpac entity dao" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package com.example.test_task.data;
+package com.example.test_task.data.mappers;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
