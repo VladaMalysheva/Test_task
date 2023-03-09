@@ -9,5 +9,7 @@
 </h1>
 <br/>
 <a href="hello/showForm">Hello Servlet</a>
+<a href="entity/kpacs">Kpacs</a>
+<a href="set/sets">Sets</a>
 </body>
 </html>

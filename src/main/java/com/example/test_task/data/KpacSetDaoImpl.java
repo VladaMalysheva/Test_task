@@ -37,8 +37,8 @@ public class KpacSetDaoImpl implements KpacSetDAO {
     }
 
     @Override
-    public boolean deleteKpacSet(KpacSet set) {
-        return jdbcTemplate.update(SQL_DELETE_SET, set.getID()) > 0;
+    public boolean deleteKpacSet(int id) {
+        return jdbcTemplate.update(SQL_DELETE_SET, id) > 0;
     }
 
     @Override

@@ -10,7 +10,7 @@ public interface KpacSetDAO {
 
     List<KpacSet> getAllKpacSets();
 
-    boolean deleteKpacSet(KpacSet set);
+    boolean deleteKpacSet(int id);
 
     boolean createKpacSet(KpacSet set);
 }

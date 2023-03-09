@@ -36,8 +36,8 @@ public class KpacEntityDaoImpl implements KpacEntityDAO {
     }
 
     @Override
-    public boolean deleteKpacEntity(KpacEntity entity) {
-        return jdbcTemplate.update(SQL_DELETE_ENTITY, entity.getID()) > 0;
+    public boolean deleteKpacEntity(int id) {
+        return jdbcTemplate.update(SQL_DELETE_ENTITY, id) > 0;
     }
 
     @Override

@@ -9,7 +9,7 @@ public interface KpacEntityDAO {
 
     List<KpacEntity> getAllKpacEntities();
 
-    boolean deleteKpacEntity(KpacEntity entity);
+    boolean deleteKpacEntity(int id);
 
     boolean createKpacEntity(KpacEntity entity);
 }
