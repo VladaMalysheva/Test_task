@@ -31,7 +31,7 @@
   <c:forEach items="${sets}" var="kpac">
     <tr>
       <td>${kpac.ID}</td>
-      <td>${kpac.title}</td>
+      <td><a href="${pageContext.request.contextPath}/set/${kpac.ID}" target="_blank">${kpac.title}</a></td>
       <td><a href="${pageContext.request.contextPath}/set/delete/${kpac.ID}">Delete</a></td>
     </tr>
   </c:forEach>

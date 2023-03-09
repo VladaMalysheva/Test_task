@@ -4,6 +4,7 @@ package com.example.test_task;
 import com.example.test_task.data.KpacEntityDaoImpl;
 import com.example.test_task.data.KpacRelationDaoImpl;
 import com.example.test_task.data.KpacSetDaoImpl;
+import com.example.test_task.data.daoInterfaces.KpacRelationDAO;
 import com.example.test_task.data.daoInterfaces.KpacSetDAO;
 import com.example.test_task.data.entities.KpacEntity;
 import com.example.test_task.data.entities.KpacSet;
@@ -22,10 +23,12 @@ import java.time.LocalDate;
 public class SetsController {
 
     KpacSetDAO dao;
+    KpacRelationDAO relDao;
 
     @Autowired
-    public SetsController(KpacSetDAO dao){
+    public SetsController(KpacSetDAO dao, KpacRelationDAO relDao){
         this.dao=dao;
+        this.relDao=relDao;
     }
 
     @RequestMapping("/sets")
@@ -47,6 +50,12 @@ public class SetsController {
 
         dao.deleteKpacSet(id);
         return "redirect:/set/sets";
+    }
+
+    @RequestMapping("/{id}")
+    public String show(@PathVariable int id, Model model){
+        model.addAttribute("kpacSet", relDao.getKpacEntitiesBySetId(id));
+        return "kpac-set";
     }
 
 

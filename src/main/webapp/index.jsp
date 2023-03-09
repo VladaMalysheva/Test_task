@@ -11,5 +11,7 @@
 <a href="hello/showForm">Hello Servlet</a>
 <a href="entity/kpacs">Kpacs</a>
 <a href="set/sets">Sets</a>
+<a href="WEB-INF/views/grid.jsp">Grid</a>
+
 </body>
 </html>

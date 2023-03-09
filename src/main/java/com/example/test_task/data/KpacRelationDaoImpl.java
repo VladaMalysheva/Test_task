@@ -1,7 +1,9 @@
 package com.example.test_task.data;
 
 import com.example.test_task.data.daoInterfaces.KpacRelationDAO;
+import com.example.test_task.data.entities.KpacEntity;
 import com.example.test_task.data.entities.KpacRelation;
+import com.example.test_task.data.mappers.KpacEntityMapper;
 import com.example.test_task.data.mappers.KpacRelationMapper;
 import com.example.test_task.data.mappers.KpacSetMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,10 @@ public class KpacRelationDaoImpl implements KpacRelationDAO {
     private final String SQL_FIND_RELATION = "select * from k_pac_relations where ID = ?";
     private final String SQL_DELETE_RELATION = "delete from k_pac_relations where ID = ?";
     private final String SQL_INSERT_RELATION = "insert into k_pac_relations(ID, KpacSetID, KpacEntityID) values(?,?,?)";
+
+    private final String SQL_GET_ENTITIES = "select entity.ID, entity.Title, entity.Description, entity.CreationDate" +
+            " from k_pac_relations as rel join k_pac as entity on rel.KpacEntityID=entity.ID " +
+            "where rel.KpacSetID = ?";
 
     @Autowired
     public KpacRelationDaoImpl(DataSource dataSource) {
@@ -45,5 +51,10 @@ public class KpacRelationDaoImpl implements KpacRelationDAO {
     @Override
     public boolean createKpacRelation(KpacRelation relation) {
         return jdbcTemplate.update(SQL_INSERT_RELATION, relation.getID(), relation.getKpacSetID(), relation.getKpacEntityID()) > 0;
+    }
+
+    @Override
+    public List<KpacEntity> getKpacEntitiesBySetId(int id) {
+        return jdbcTemplate.query(SQL_GET_ENTITIES, new KpacEntityMapper(), id);
     }
 }
